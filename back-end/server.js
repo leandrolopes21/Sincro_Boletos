@@ -50,7 +50,7 @@ app.post('/api/taxas', upload.single('arquivoPdf'), async (req, res) => {
         });
 
     } catch (error) {
-        console.error('Erro na API:', erro);
+        console.error('Erro na API:', error);
         res.status(500).json({erro: 'Erro interno ao processar o PDF.'});
     }
 });
